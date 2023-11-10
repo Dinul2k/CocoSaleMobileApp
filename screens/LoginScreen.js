@@ -16,24 +16,24 @@ export default function LoginScreen() {
         <View className="flex-row justify-around w-full absolute">
             <Animated.Image 
                 entering={FadeInUp.delay(200).duration(1000).springify()} 
-                source={require('../assets/images/light.png')} 
-                className="h-[225] w-[90]" 
+                source={require('../assets/images/coconut.png')} 
+                className="h-[305] w-[290]" 
             />
-            <Animated.Image 
+            {/* <Animated.Image 
                 entering={FadeInUp.delay(400).duration(1000).springify()} 
                 source={require('../assets/images/light.png')} 
                 className="h-[160] w-[65] opacity-75" 
-            />
+            /> */}
         </View>
 
         {/* title and form */}
         <View className="h-full w-full flex justify-around pt-40 pb-10">
             
             {/* title */}
-            <View className="flex items-center">
+            <View className="flex items-right mt-20 ml-4">
                 <Animated.Text 
                     entering={FadeInUp.duration(1000).springify()} 
-                    className="text-white font-bold tracking-wider text-5xl">
+                    className="text-white font-bold tracking-wider text-5xl ">
                         Login
                 </Animated.Text>
             </View>
@@ -64,7 +64,7 @@ export default function LoginScreen() {
                     className="w-full" 
                     entering={FadeInDown.delay(400).duration(1000).springify()}>
 
-                    <TouchableOpacity className="w-full bg-sky-400 p-3 rounded-2xl mb-3">
+                    <TouchableOpacity className="w-full bg-green-500 p-3 rounded-2xl mb-3">
                         <Text className="text-xl font-bold text-white text-center">Login</Text>
                     </TouchableOpacity>
                 </Animated.View>
@@ -75,7 +75,7 @@ export default function LoginScreen() {
 
                     <Text>Don't have an account? </Text>
                     <TouchableOpacity onPress={()=> navigation.push('Signup')}>
-                        <Text className="text-sky-600">SignUp</Text>
+                        <Text className="text-green-600">SignUp</Text>
                     </TouchableOpacity>
                 </Animated.View>
             </View>
